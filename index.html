@@ -1,61 +1,170 @@
 <!DOCTYPE html>
-<html lang="pt-BR"> <head>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechDrop</title>
+    <title>TechDrop - Galáxias Artificiais</title>
     <style>
+        /* Configurações gerais do corpo da página */
+        body {
+            background-color: #0b0f19; /* Cor de fundo escura lembrando o espaço */
+            color: #f0f4f8; /* Texto claro para dar contraste */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Estilização do Cabeçalho */
         header {
-            background-color: #1caabd;
-            color: rgb(255, 255, 255);
+            background-color: #111827;
+            color: #ffffff;
             text-align: center;
             max-width: 800px;
-            margin: 0 auto;
-            padding: 10px;
-            border: 2px solid #11465f;
+            margin: 0 auto 20px auto;
+            padding: 20px;
+            border: 2px solid #1caabd; /* Borda com o azul-ciano original */
+            border-radius: 8px; /* Cantos arredondados */
+            box-shadow: 0 4px 15px rgba(28, 170, 189, 0.3); /* Efeito luminoso */
         }
+
+        header h1 {
+            margin: 0;
+            color: #1caabd; /* Destaque no título */
+        }
+
+        /* Estilização do Conteúdo Principal */
         main {
-            background-color: aliceblue;
-            color: rgb(28, 170, 189);
+            background-color: #1f293d; /* Fundo do card ligeiramente mais claro que o body */
             max-width: 800px;
             margin: 0 auto;
-            padding: 10px;
+            padding: 20px;
             display: flex;
+            flex-direction: row;
+            gap: 20px; /* Espaçamento entre a imagem e o texto */
+            border-radius: 8px;
+            align-items: center;
         }
+
+        /* Responsividade para telas menores (celulares) */
+        @media (max-width: 600px) {
+            main {
+                flex-direction: column;
+            }
+            img {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+
+        /* Estilização da Imagem */
         img {
-            width: 400px;
-            height: 400px;
-            display: block; /* Opcional: Garante que a imagem se comporte bem com o texto */
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 2px solid #1caabd;
+        }
+
+        /* Bloco de texto do artigo */
+        .conteudo-artigo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .conteudo-artigo h2 {
+            color: #1caabd;
+            margin-top: 0;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+            color: #9ab2cd;
+            font-size: 0.9rem;
             margin-bottom: 15px;
         }
-        .artigo-autor{
-            font-weight: bold;
 
+        .texto-artigo {
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        /* Container para os botões de reação */
+        .reacoes {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Estilização padrão dos botões */
+        .btn-reacao {
+            background-color: #111827;
+            color: white;
+            border: 1px solid #1caabd;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease; /* Transição suave ao passar o mouse */
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Efeito de Hover (passar o mouse) nos botões */
+        .btn-reacao:hover {
+            background-color: #1caabd;
+            color: #111827;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>TechDrop</h1>
-        <p>Tudo o que você precisa saber sobre o universo tech em um só lugar!</p>
+        <p>Acelerando sua mente no ritmo da Inteligência Artificial e do Pixel Art!</p>
     </header>
     
     <main>
         <img src="imagem_blog.png" alt="Arte em pixel art de um astronauta flutuando no espaço sideral. Ao fundo, do lado esquerdo, há um grande sol brilhante em tons de laranja e amarelo, cercado por pequenas estrelas e galáxias distantes. O astronauta veste um traje espacial branco com detalhes em azul-ciano (combinando com a cor #1caabd). Ele segura na palma da mão direita uma gota digital brilhante e iluminada em azul, que remete ao nome 'TechDrop'. O estilo visual simula uma grade de 80x80 pixels, ideal para ícones de tecnologia.">
-        <div>
-            <h2>O início da nossa jornada</h2>
+        
+        <div class="conteudo-artigo">
+            <h2>Criando uma Galáxia Artificial com IA e Piskel</h2>
             <p class="artigo-autor">Por: Mirella Nogueira</p>
-            <p>Seja muito bem-vindo ao meu novo ponto de encontro com a tecnologia.</p>
-            <button>❤️<span>0</span></button>
+            
+            <p class="texto-artigo">
+                Você já imaginou criar uma <strong>Galáxia Artificial</strong> inteira usando códigos e criatividade? Com o avanço da <strong>Inteligência Artificial</strong> generativa, algoritmos agora conseguem simular o nascimento de estrelas e o movimento de sistemas cósmicos complexos em segundos.
+            </p>
+            <p class="texto-artigo">
+                Para dar aquele toque retrô e nostálgico a essa imensidão digital, ferramentas como o <strong>Piskel</strong> se tornam grandes aliadas. O Piskel permite transformar essas referências espaciais geradas por IA em lindas animações de <em>Pixel Art</em>, unindo o futuro da tecnologia com a estética clássica dos jogos de 8 e 16 bits.
+            </p>
+
+            <div class="reacoes">
+                <button class="btn-reacao">👍 Gostei <span>0</span></button>
+                <button class="btn-reacao">👎 Não Gostei <span>0</span></button>
+            </div>
         </div>
     </main>
-</body>
+
 <script>
-    const botao = document.querySelector("button");
-    botao.addEventListener("click", botaoClicado);
-    function botaoClicado(){
-        console.log("Fui clicado");
-        let texto = botao.querySelector("span");
-        texto.textContent++;
-    }
+    // Seleciona todos os botões que possuem a classe '.btn-reacao'
+    const botoes = document.querySelectorAll(".btn-reacao");
+
+    // Passa por cada botão encontrado na página
+    botoes.forEach(function(botao) {
+        // Adiciona o evento de 'click' para cada um deles
+        botao.addEventListener("click", function() {
+            // 'this' se refere exatamente ao botão que foi clicado neste momento
+            console.log("Um botão de reação foi clicado!");
+            
+            // Procura a tag <span> que está dentro do botão clicado
+            let contador = this.querySelector("span");
+            
+            // Pega o número atual do texto, transforma em número inteiro e soma +1
+            contador.textContent = parseInt(contador.textContent) + 1;
+        });
+    });
 </script>
+</body>
 </html>
