@@ -1,15 +1,21 @@
-// Seleciona todos os botões de reação de todos os posts gerados no HTML
+// --- Código das Aulas Anteriores (Contador de Reações) ---
 const botoes = document.querySelectorAll(".btn-reacao");
 
-// Adiciona o evento de clique individualmente para cada botão mapeado
 botoes.forEach(function(botao) {
     botao.addEventListener("click", function() {
         console.log("Reação registrada no console!");
-        
-        // Localiza o elemento de texto (span) interno do botão que foi clicado
         let contador = this.querySelector("span");
-        
-        // Pega o valor textual atual do span, converte em número inteiro e soma +1
         contador.textContent = parseInt(contador.textContent) + 1;
     });
+});
+
+
+// --- AULA: Mecanismo para alternar o Tema Claro/Escuro ---
+// Seleciona o botão da lua pela classe dele
+const botaoTema = document.querySelector(".btn-tema-escuro");
+
+// Adiciona o evento de clique no botão da lua
+botaoTema.addEventListener("click", function() {
+    // O comando "toggle" adiciona a classe se ela não existir, e remove se ela já existir
+    document.body.classList.toggle("tema-escuro");
 });
