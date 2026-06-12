@@ -26,7 +26,7 @@ header h1 {
     color: #1caabd; 
 }
 
-/* AULA: Transformamos o main em um container Flexbox e adicionamos o flex-wrap */
+/*  Transformamos o main em um container Flexbox e adicionamos o flex-wrap */
 main {
     background-color: #1f293d; 
     padding: 20px;
@@ -36,10 +36,10 @@ main {
     justify-content: center; /* Centraliza o bloco de posts na tela */
 }
 
-/* AULA: Estilização completa do card de cada postagem seguindo as regras da aula */
+/* Estilização completa do card de cada postagem seguindo as regras*/
 article {
     display: flex;
-    border: 1px solid #183C63; /* Borda sólida e azul conforme a aula */
+    border: 1px solid #183C63; /* Borda sólida e azul */
     background-color: #111827; /* Fundo interno do card */
     margin: 16px; /* Espaçamento externo */
     gap: 16px; /* Espaçamento entre os elementos internos */
