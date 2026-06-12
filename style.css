@@ -1,7 +1,7 @@
-/* AULA: Definindo as variáveis de cor para o Modo Claro (Padrão) */
+/* Definindo as variáveis de cor para o Modo Claro (Padrão) */
 :root {
     --cor-primaria: #183C63;
-    --cor-secundaria: #1a589b;
+    --cor-secundaria: #3782d2;
     --cor-fundo: #ffffff;
     --cor-texto: #151428;
     --cor-contraste: #f3eef7;
@@ -12,33 +12,33 @@
 .tema-escuro {
     --cor-primaria: #c9e3ff;
     --cor-secundaria: #3782d2;
-    --cor-fundo: #000000;
-    --cor-texto: #e2e8f0; /* Ajustado levemente para dar leitura no fundo preto */
-    --cor-contraste: #f3eef7;
-    --cor-botao: #f9f9f9;
+    --cor-fundo: #000000;       /* Fundo geral fica preto */
+    --cor-texto: #f0f4f8;       /* Texto fica claro para dar leitura */
+    --cor-contraste: #1f293d;   /* Invertendo o contraste para o modo escuro */
+    --cor-botao: #111827;       /* Os cards dos artigos ficam escuros */
 }
 
 /* AULA: Seletor universal adicionando o efeito de transição suave */
 * {
-    transition: background-color 0.8s ease;
+    transition: background-color 0.8s ease, color 0.8s ease;
 }
 
 body {
     max-width: 100vw;
     margin: 0;
     padding: 20px;
-    background-color: var(--cor-fundo); /* Aplicando variável */
-    color: var(--cor-texto); /* Aplicando variável */
+    background-color: var(--cor-fundo); 
+    color: var(--cor-texto); 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
 
 header {
-    background-color: var(--cor-primaria); /* Aplicando variável */
-    color: var(--cor-fundo); /* Aplicando variável */
+    background-color: var(--cor-primaria); 
+    color: var(--cor-fundo); 
     text-align: center;
     padding: 20px;
-    border: 2px solid var(--cor-secundaria); /* Aplicando variável */
+    border: 2px solid var(--cor-secundaria); 
     border-radius: 8px; 
     box-shadow: 0 4px 15px rgba(28, 170, 189, 0.3); 
     margin-bottom: 20px;
@@ -46,11 +46,13 @@ header {
 
 header h1 {
     margin: 0;
-    color: var(--cor-contraste); /* Aplicando variável para destaque */
+    /* Usando a cor de fundo do tema para contrastar com o topo */
+    color: var(--cor-fundo); 
 }
 
 main {
-    background-color: var(--cor-fundo); /* Aplicando variável */
+    /* CORRIGIDO: Agora o fundo do main também acompanha a variável de fundo */
+    background-color: var(--cor-fundo); 
     padding: 20px;
     border-radius: 8px;
     display: flex; 
@@ -61,9 +63,8 @@ main {
 /* AULA: Ajustando o Card dos Artigos com Flex e Box-Shadow */
 article {
     display: flex;
-    /* AULA: Removido o border antigo e adicionado o box-shadow */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
-    background-color: var(--cor-botao); /* Aplicando variável de fundo do card */
+    background-color: var(--cor-botao); /* Fica claro no modo claro e escuro no modo escuro */
     margin: 16px; 
     gap: 16px; 
     padding: 16px; 
@@ -104,7 +105,8 @@ img {
 }
 
 .btn-reacao {
-    background-color: var(--cor-contraste);
+    /* Usando contraste para o fundo dos botões de reação */
+    background-color: var(--cor-contraste); 
     color: var(--cor-texto);
     border: 1px solid var(--cor-secundaria);
     padding: 8px 12px;
